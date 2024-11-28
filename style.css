@@ -1,314 +1,329 @@
 /* @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap'); */
 
 @font-face {
-	font-family: 'Xenia Extended';
-	src: url('./fonts/Xenia\ Extended/ofont.ru_Xenia\ Extended.ttf') format('truetype');
-	font-weight: normal;
-	font-style: normal;
+  font-family: "Xenia Extended";
+  src: url("./fonts/Xenia\ Extended/ofont.ru_Xenia\ Extended.ttf")
+    format("truetype");
+  font-weight: normal;
+  font-style: normal;
 }
 
 @font-face {
-	font-family: 'Gilroy Light';
-	src: url('./fonts/Gilroy/Gilroy-Light.otf') format('truetype');
-	font-weight: normal;
-	font-style: normal;
+  font-family: "Gilroy Light";
+  src: url("./fonts/Gilroy/Gilroy-Light.otf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
 }
 
 /* Общий стиль */
 
-*, *::before, *::after {
-	box-sizing: inherit;
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
 }
 
 html {
-	box-sizing: border-box;
-	scroll-behavior: smooth;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 body {
-	margin: 0;
-	font-family: "Xenia Extended", sans-serif;
-	font-size: 18px;
-	font-weight: 100;
-	background-color: #101010;
-	color: white;
-	display: flow-root;
-	overflow-x: hidden;
+  margin: 0;
+  font-family: "Xenia Extended", sans-serif;
+  font-size: 18px;
+  font-weight: 100;
+  background-color: #101010;
+  color: white;
+  display: flow-root;
+  overflow-x: hidden;
 }
 
-body::-webkit-scrollbar {
-  display: none;
+::-webkit-scrollbar {
+  width: 8px;
+  height: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #061f00;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }
 
 a {
-	display: inline-block;
-	
-	color: #fff;
-	text-decoration: none;
+  display: inline-block;
 
+  color: #fff;
+  text-decoration: none;
 }
 
 p {
-	margin: 0;
-	font-family: 'Gilroy Light';
+  margin: 0;
+  font-family: "Gilroy Light";
 }
 
 p + p {
-	margin-top: 15px;
+  margin-top: 15px;
 }
 
 ul {
-	list-style: none;
-	padding: 0;
-	margin: 0;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
-h1, h2, h3, h4, h5, h6 {
-	font-weight: 500;
-	margin: 0;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 500;
+  margin: 0;
 }
 
 /* Background */
 
 section::before {
-	content: '';
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background: url('./assets/images/background.jpg') no-repeat center center;
-	background-size: cover;
-	filter: blur(10px); /* Размытие фона */
-	opacity: 0.5;
-	z-index: -1
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("./assets/images/background.jpg") no-repeat center center;
+  background-size: cover;
+  filter: blur(10px); /* Размытие фона */
+  opacity: 0.5;
+  z-index: -1;
 }
 
 section {
-	position: relative;
-	padding: 40px 0;
-	
+  position: relative;
+  padding: 40px 0;
 }
 
 object {
-	cursor: pointer;
+  cursor: pointer;
 }
 
 img {
-	/* display: block; */
-	max-width: 100%;
-	height: auto;
+  /* display: block; */
+  max-width: 100%;
+  height: auto;
 }
 
 video {
-	width: 100%;
-	height: auto;
+  width: 100%;
+  height: auto;
 }
 
 .container {
-	max-width: 1100px;
-	width: 100%;
-	margin: 0 auto;
-	padding: 0 30px;
+  max-width: 1100px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 30px;
 }
-
-
 
 /* Общие классы */
 
 .left-and-right {
-	display: flex;
-	justify-content: space-between;
-	flex-wrap: wrap;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.section__media {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1 / 1; /* Соотношение сторон 1:1 для квадратной формы */
+  object-fit: cover; /* Заполняет контейнер, сохраняя пропорции */
+  max-width: 100vw; /* Ограничение по ширине для предотвращения выхода за пределы экрана */
 }
 
 .section__wrapper {
-	margin: 200px 0;
+  margin: 200px 0;
 }
 
 .section__left {
-	width: 50%;
+  width: 50%;
 }
 
 .section__center {
-	position: relative;
+  position: relative;
 }
 
 .section__right {
-	width: 50%;
+  width: 50%;
 }
 
 .section__title {
-	overflow-wrap: break-word;
-	font-size: 5.6em;
-	line-height: 0.78;
-	text-transform: uppercase;
-	/* box-shadow: 5px 5px 10px #101010; */
+  overflow-wrap: break-word;
+  font-size: 5.6em;
+  line-height: 0.78;
+  text-transform: uppercase;
+  /* box-shadow: 5px 5px 10px #101010; */
 }
 
 .section__subtitle {
-	font-size: 16px;
-	font-weight: 400;
-	text-transform: uppercase;
-	margin-bottom: 27px;
+  font-size: 16px;
+  font-weight: 400;
+  text-transform: uppercase;
+  margin-bottom: 27px;
 }
 
 .section__note {
-	font-size: 20px;
-	font-weight: 600;
-	text-transform: uppercase;
-	margin-bottom: 27px;
+  font-size: 20px;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 27px;
 }
 
 .section__text {
-	font-size: 20px;
-	font-weight: 400;
-	line-height: 24px;
-	margin-bottom: 30px;
-} 
-
-.qr-code {
-	margin: 0 20px 40px;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 24px;
+  margin-bottom: 30px;
 }
 
-
-
+.qr-code {
+  max-width: 100px;
+  margin: 0 20px 40px;
+}
 
 /* Header */
 
-.header {	
-	padding: 30px 0;
-	position: relative;
-	background: linear-gradient(to bottom, #121306d0, #132006dd);
-	top: 0;
-	left: 0;
-	width: 100%;
-	z-index: 1000;
-	transition: all .2s ease;
+.header {
+  padding: 30px 0;
+  position: relative;
+  background: linear-gradient(to bottom, #121306d0, #132006dd);
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  transition: all 0.2s ease;
 }
 
 .header.fixed {
-
-	position: sticky;
+  position: sticky;
 }
 
 .header__wrapper {
-	position: relative;
+  position: relative;
 }
 
 .header__list {
-	display: flex;
-	justify-content: space-between;
-	gap: 80px;
-	align-items: center;
-	flex-wrap: wrap;
-	
+  display: flex;
+  justify-content: space-between;
+  gap: 80px;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 .header__link {
-	font-size: 24px;
-	transition: 0.2s linear opacity;
+  font-size: 24px;
+  transition: 0.2s linear opacity;
 }
 
 .header__link.active {
-	text-decoration: underline;
-	transition: all 0.2s linear;
+  text-decoration: underline;
+  transition: all 0.2s linear;
 }
 
 .header__link:hover {
-	opacity: 0.7;
+  opacity: 0.7;
 }
 
 .header__btn {
-	float: right;
-	margin-top: 20px;
-	/* position: absolute;
+  float: right;
+  margin-top: 20px;
+  /* position: absolute;
 	right: 80px; */
 }
 
 .btn {
-	padding: 12px;
-	font-size: 12px;
-	text-align: center;
-	border: 1px solid #fff;
-	border-radius: 5px;
-	text-transform: uppercase;
-	transition: 0.2s linear opacity;
+  padding: 12px;
+  font-size: 12px;
+  text-align: center;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  text-transform: uppercase;
+  transition: 0.2s linear opacity;
 }
 
 .btn:hover {
-	opacity: 0.7;
+  opacity: 0.7;
 }
 
 /* Intro */
 
 .intro {
-	padding-bottom: 100px;
+  padding-bottom: 100px;
 }
 
 .intro__wrapper {
-	text-align: center;
+  text-align: center;
 }
 
 .intro__logo {
-	max-width: 100%;
-	height: auto;
-	display: block;
-	margin: 90px auto 60px;
-	padding: 0 30px;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 90px auto 60px;
+  padding: 0 30px;
 }
 
 .intro__text {
-	font-size: 24px;
-	text-transform: uppercase;
-	text-align: center;
-	margin-bottom: 8px;
+  font-size: 24px;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 8px;
 }
 
 .intro__subtext {
-	font-size: 24px;
-	text-align: center;
-	margin-bottom: 30px;
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 30px;
 }
 
-
-
 .intro__btn {
-	display: inline-block;
-	font-size: 24px;
-	padding: 15px 20px;
+  display: inline-block;
+  font-size: 24px;
+  padding: 15px 20px;
 }
 
 /* Swiper */
 
 .center__swiper {
-	box-shadow: 0 5px 25px 0px #000000;
+  box-shadow: 0 5px 25px 0px #000000;
 }
 
 .swiper-wrapper {
-	width: 500px;
+  width: 500px;
   height: 500px;
 }
 
 .swiper-slide {
-	display: flex;
-  justify-content: center; 
+  display: flex;
+  justify-content: center;
   align-items: center;
 }
 
-.swiper-slide img {
-  max-width: 100%;  
-  height: auto;    
+.swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
+.center__swiper-pagination {
+  margin: 0 var(--swiper-pagination-bullet-horizontal-gap, 15px);
 }
-
-
-.swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet, .center__swiper-pagination{
-	margin: 0 var(--swiper-pagination-bullet-horizontal-gap,15px)
-}
-
 
 .swiper-pagination-bullet {
-  width: 15px;  /* Ширина точки */
+  width: 15px; /* Ширина точки */
   height: 15px; /* Высота точки */
   background-color: #fff; /* Цвет точки по умолчанию */
   opacity: 1; /* Полностью видимые точки */
@@ -316,7 +331,7 @@ video {
 
 /* Цвет активной точки */
 .swiper-pagination-bullet-active {
-  background-color: #7DFA8A; /* Например, томатный цвет */
+  background-color: #7dfa8a; /* Например, томатный цвет */
 }
 
 /* Форма точки (если хочешь сделать, например, квадратной) */
@@ -336,724 +351,706 @@ video {
 
 /* Center Swiper  */
 
-
 .center__swiper {
-	display: flex;
-	align-items: center;
-	position: absolute;
-	top: 80px;
-	left: -190px;
-	z-index: 3;
-	max-width: 350px;
-	max-height: 350px;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 80px;
+  left: -190px;
+  z-index: 3;
+  max-width: 350px;
+  max-height: 350px;
 }
 
-.mafia__bunker{
-	text-transform: uppercase;
-	font-size: 3em;
-	line-height: 0.8;
+/* Mafia */
+
+.mafia__first-game-text {
+  text-transform: none;
+}
+
+.mafia__bunker {
+  text-transform: uppercase;
+  font-size: 3em;
+  line-height: 0.8;
 }
 
 .mafia__right {
-	text-align: right;
-	z-index: 2;
+  text-align: right;
+  z-index: 2;
 }
-
 
 /* Travel */
 
 .travel__under-title {
-	font-weight: 400;
-	font-size: 36px;
-	line-height: 0.85;
-	text-transform: uppercase;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 0.85;
+  text-transform: uppercase;
 }
 
 .travel__text {
-	margin: 40px 0;
+  margin: 40px 0;
 }
 
 /* Sport */
 
-.sport__text {
-	margin: 100px 0 80px;
+.sport__title {
+  font-size: 85px;
 }
 
-.sport__title {
-	font-size: 90px;
-	position: relative;
-	z-index: 10;
+.sport__text {
+  margin: 100px 0 80px;
 }
 
 .airsoft__right {
-	text-align: right;
+  text-align: right;
 }
 
 .airsoft__title {
-	position: relative;
-
-	z-index: 3;
+  position: relative;
+  font-size: 4rem;
+  z-index: 3;
 }
 
 .airsoft__text {
-	margin: 80px 0 70px;
+  margin: 80px 0 70px;
 }
 
 .karaoke {
-	text-align: right;
+  text-align: right;
+}
+
+.karaoke__title {
+  font-size: 90px;
 }
 
 .karaoke__text {
-	margin: 50px 0;
+  margin: 50px 0;
 }
 
 /* Reviews */
 
 .reviews {
-	padding: 150px 0;
+  padding: 150px 0;
 }
 
 .reviews__wrapper {
-	text-align: center;
+  text-align: center;
 }
 
-.reviews__swiper-wrapper, .team__swiper-wrapper {
-	height: auto;
+.reviews__swiper-wrapper,
+.team__swiper-wrapper {
+  height: auto;
 }
 
 .reviews__suptitle {
-font-size: 40px;
-font-weight: 400;
-line-height: 42.34px;
-text-transform: uppercase;
-
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 42.34px;
+  text-transform: uppercase;
 }
 .reviews__title {
-
-font-size: 100px;
-font-weight: 400;
-line-height: 105.86px;
-text-align: center;
-text-transform: uppercase;
-
+  font-size: 100px;
+  font-weight: 400;
+  line-height: 105.86px;
+  text-align: center;
+  text-transform: uppercase;
 }
 .reviews__subtitle {
-	font-size: 40px;
-	font-weight: 400;
-	line-height: 42.34px;
-	text-align: center;
-	text-transform: uppercase;
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 42.34px;
+  text-align: center;
+  text-transform: uppercase;
 }
 
 .reviews__item {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	gap: 30px;
-	max-width: 1000px;
-	border: 3px solid #D9D9D9;
-	border-radius: 1000px;
-	margin-top: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+  max-width: 1000px;
+  border: 3px solid #d9d9d9;
+  border-radius: 1000px;
+  margin-top: 100px;
 }
 
-.reviews__item img {
-	max-width: 350px;
-}
+/* .reviews__item img {
+  max-width: 350px;
+} */
 
 .reviews__photo {
-	border-radius: 1000px 0 0 1000px;
+  border-radius: 1000px 0 0 1000px;
+  width: 350px;
 }
 
 .reviews__name {
-	font-size: 30px;
-	font-weight: 400;
-	line-height: 24px;
-	text-align: center;
-	margin-bottom: 30px;
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: center;
+  margin-bottom: 30px;
 }
 
 .reviews__text {
-	font-size: 20px;
-	font-weight: 400;
-	line-height: 24px;
-	text-align: center;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: center;
 }
 
 .reviews__invite {
-	padding-right: 50px;
+  padding-right: 50px;
 }
 
-.reviews__qr-code {
-	display: block;
-	margin: 0 auto;
+.reviews__qr-code img {
+  display: block;
+  margin: 0 auto;
+  max-width: 100px;
 }
 
 .reviews__btn {
-	margin-top: 30px;
+  margin-top: 30px;
 }
 
 /* Owners */
 
 .owners {
-	padding: 150px 0;
+  padding: 150px 0;
 }
 
 .owners__title {
-font-size: 100px;
-font-weight: 400;
-line-height: 1.1;
-text-align: center;
-text-transform: uppercase;
-margin-bottom: 50px;
+  font-size: 100px;
+  font-weight: 400;
+  line-height: 1.1;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 50px;
 }
 
 .owners__items {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	gap: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
 }
 
 .owners__img {
-	border-radius: 50%;
-	margin-bottom: 20px;
+  max-width: 250px;
+  max-height: 250px;
+  object-fit: cover;
+  border-radius: 50%;
+  object-position: center;
+  overflow: hidden;
 }
+
 .owners__name {
-	
-	font-size: 16px;
-	font-weight: 400;
-	line-height: 17.6px;
-	text-align: center;
-	text-transform: uppercase;	
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 17.6px;
+  text-align: center;
+  text-transform: uppercase;
 }
 .owners__text {
-	
-font-size: 20px;
-font-weight: 400;
-line-height: 24px;
-text-align: center;
-
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: center;
 }
 
 .owners__qr-code {
-	display: block;
-	margin: 40px auto;
-	
-	
+  display: block;
+  margin: 40px auto;
 }
 
 .owners__btn {
-	display: block;
-	margin: auto;
-	float: none;
+  display: block;
+  margin: auto;
+  float: none;
 }
 
 /* Team */
 
 .team {
-	padding: 150px 0;
+  padding: 150px 0;
 }
 
 .team__title {
-	
-font-size: 100px;
-font-weight: 400;
-line-height: 105.86px;
-text-align: center;
-text-transform: uppercase;
+  font-size: 100px;
+  font-weight: 400;
+  line-height: 105.86px;
+  text-align: center;
+  text-transform: uppercase;
 }
 
 .team__item {
-	display: flex;
-	height: auto;
-	justify-content: space-between;
-	align-items: center;
-	gap: 30px;
-	max-width: 1000px;
-	border: 3px solid #D9D9D9;
-	border-radius: 1000px;
-	margin-top: 100px;
+  display: flex;
+  height: auto;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+  max-width: 1000px;
+  border: 3px solid #d9d9d9;
+  border-radius: 1000px;
+  margin-top: 100px;
 }
 
 .team__photo {
-	border-radius: 50%;
-	width: 300px;
+  border-radius: 50%;
+  width: 300px;
 }
 
 .team__name {
-	font-size: 30px;
-	font-weight: 400;
-	line-height: 24px;
-	text-align: center;
-	margin-bottom: 30px;
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: center;
+  margin-bottom: 30px;
 }
 .team__prof {
-	font-size: 20px;
-	font-weight: 400;
-	line-height: 24px;
-	text-align: center;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: center;
 }
 
 .team__info {
-	font-size: 20px;
-	font-weight: 400;
-	line-height: 24px;
-	text-align: center;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: center;
 }
 
 .team__invite {
-	padding-right: 50px;
-
+  padding-right: 50px;
 }
 .team__btn {
-	margin-top: 30px;
+  margin-top: 30px;
 }
 
 .team__qr-code {
-	display: block;
-	margin: 0 auto;
+  display: block;
+  margin: 0 auto;
 }
 
 /* Footer */
 
 .footer {
-	padding: 50px 0;
-	background-color: #fff;
+  padding: 50px 0;
+  background-color: #fff;
 }
 
 .footer__items {
-	display: flex;
-	justify-content: space-around;
-	align-items: center;
-	flex-wrap: wrap;
-	
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
 }
 .footer__item {
-	text-align: center;
-	margin-bottom: 30px;
+  text-align: center;
+  margin-bottom: 30px;
 }
 .footer__support {
-	display: block;
-	text-transform: uppercase;
-	font-size: 20px;
-	font-weight: 400;
-	line-height: 21.17px;
-	color: #1F1810;
+  display: block;
+  text-transform: uppercase;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 21.17px;
+  color: #1f1810;
 }
 .footer__mail {
-	display: block;
-	font-family: "Gilroy Light";
-	font-size: 15px;
-	font-weight: 400;
-	line-height: 18px;
-	color: #1F1810;
+  display: block;
+  font-family: "Gilroy Light";
+  text-decoration: underline;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 18px;
+  color: #1f1810;
 }
 .footer__quote {
-	color: #1F1810;
-	font-size: 32px;
-	font-weight: 400;
-	line-height: 33.88px;
-	text-align: center;
-	text-transform: uppercase;
+  color: #1f1810;
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 33.88px;
+  text-align: center;
+  text-transform: uppercase;
 }
 
 @media screen and (max-width: 1150px) {
-	.airsoft__title {
-		font-size: 5.2em;
-	}
+  .airsoft__title {
+    font-size: 5.2em;
+  }
 
-	.karaoke__title {
-		font-size: 5em;
-	}
+  .karaoke__title {
+    font-size: 5em;
+  }
 
-	.owners__title {
-		font-size: 72px;
-	}
+  .owners__title {
+    font-size: 72px;
+  }
 }
 
 @media screen and (max-width: 1070px) {
+  .header {
+    position: absolute;
+    padding: 15px 0;
+  }
 
-	.header {
-		position: absolute;
-		padding: 15px 0;
-	}
+  .header.fixed {
+    position: absolute;
+  }
 
-	.header.fixed {
-		position: absolute;
-	}
+  .header__list {
+    flex-direction: column;
+    gap: 30px;
+  }
 
-	.header__list {
-		flex-direction: column;
-		gap: 30px;
-	}
+  .header__btn {
+    display: none;
+  }
 
-	.header__btn {
-		display: none;
-	}
-
-	.intro__logo {
-		margin-top: 300px;
-	}
-
-	
+  .intro__logo {
+    margin-top: 300px;
+  }
 }
 
 @media screen and (max-width: 1000px) {
+  .btn {
+    font-size: 18px;
+  }
 
-	.btn {
-		font-size: 18px;
-	}
+  .intro__btn {
+    font-size: 24px;
+  }
 
-	.intro__btn {
-		font-size: 24px;
-	}
+  .left-and-right {
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+  }
 
-	.left-and-right {
-		flex-direction: column;
-		justify-content: center;
-		gap: 30px;
-	}
+  .section__left,
+  .section__right {
+    width: 100%;
+    text-align: center;
+  }
 
-	.section__left, .section__right {
-		width: 100%;
-		text-align: center;
-	}
+  .section__wrapper {
+    margin: 50px 0;
+  }
 
-	.section__wrapper {
-		margin: 50px 0;
-	}
+  .center__swiper {
+    display: none;
+  }
 
-	.center__swiper {
-		display: none;
-	}
+  .travel__left-and-right,
+  .sport__left-and-right {
+    flex-direction: column-reverse;
+  }
 
-	.travel__left-and-right, .sport__left-and-right {
-		flex-direction: column-reverse;
-	}
+  .airsoft__title {
+    right: 0;
+    font-size: 4em;
+  }
 
-	.airsoft__title {
-		right: 0;
-		font-size: 4em;
-	}
+  .airsoft__text {
+    margin: 30px 0;
+  }
 
-	.airsoft__text {
-		margin: 30px 0;
-	}
+  .sport__text {
+    margin: 50px 0;
+  }
 
-	.sport__text {
-		margin: 50px 0;
-	}
+  .reviews {
+    padding: 100px 0;
+  }
 
-	.reviews {
-		padding: 100px 0;
-	}
+  .reviews__item {
+    margin-top: 50px;
+    flex-direction: column;
+    max-width: 350px;
+  }
 
-	.reviews__item {
-		margin-top: 50px;
-		flex-direction: column;
-		width: 350px;
-	}
+  .reviews__photo {
+    border-radius: 1000px 1000px 0 0;
+    width: 350px;
+  }
 
-	.reviews__item {
-		max-width: 350px;
-	}
+  .reviews__invite {
+    padding: 0 0 100px;
+  }
 
-	.reviews__photo {
-		border-radius: 1000px 1000px 0 0;
-		width: 350px;
-	}
+  .owners {
+    padding: 100px 0;
+  }
 
-	.reviews__invite {
-		padding: 0 0 100px;
-	}
+  .owners__title {
+    font-size: 60px;
+    line-height: normal;
+  }
 
-	.owners {
-		padding: 100px 0;
-	} 
+  .owners__items {
+    flex-direction: column;
+  }
 
-	.owners__title {
-		font-size: 60px;
-		line-height: normal;
-	}
+  .owners__item {
+    max-width: 1000px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+  }
 
-	.owners__items {
-		flex-direction: column;
-	}
+  .owners__name {
+    font-size: 40px;
+    line-height: 1;
+  }
 
-	.owners__item {
-		max-width: 1000px;
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-		gap: 50px;
-	}
+  .owners__qr-code {
+    display: none;
+  }
 
-	.owners__img {
-		max-width: 100%;
-		height: auto;
-	}
+  .owners__text {
+    font-size: 32px;
+  }
 
-	.owners__name {
-		font-size: 40px;
-		line-height: 1;
-	}
+  .team {
+    padding: 100px 0;
+  }
 
-	.owners__qr-code {
-		display: none;
-	}
+  .team__item {
+    margin-top: 50px;
+    flex-direction: column;
+    width: 350px;
+  }
 
-	.owners__text {
-		font-size: 32px;
-	}
+  .team__photo {
+    width: 350px;
+  }
 
-	.team {
-		padding: 100px 0;
-	}
-
-	.team__item {
-		margin-top: 50px;
-		flex-direction: column;
-		width: 350px;
-	}
-
-	.team__photo {
-		width: 350px;
-	}
-
-	.team__invite {
-		padding: 0 0 100px;
-	}
-
-	
+  .team__invite {
+    padding: 0 0 100px;
+  }
 }
 
 @media screen and (max-width: 750px) {
-	.qr-code {
-		display: none;
-	}
+  .qr-code {
+    display: none;
+  }
 
-	.left-and-right {
-		gap: 10px;
-	}
+  .left-and-right {
+    gap: 10px;
+  }
 
-	.section__title {
-		font-size: 4.8em;
-	}
+  .section__title {
+    font-size: 4.8em;
+  }
 
-	.airsoft__title  {
-		font-size: 3em;
-	}
+  .airsoft__title {
+    font-size: 3em;
+  }
 
-	.reviews__title {
-		font-size: 72px;
-		line-height: 1;
-	}
+  .reviews__title {
+    font-size: 72px;
+    line-height: 1;
+  }
 
-	.owners {
-		padding: 50px 0;
-	}
+  .owners {
+    padding: 50px 0;
+  }
 
-	.owners__title {
-		font-size: 40px;
-		line-height: normal;
-	}
+  .owners__title {
+    font-size: 40px;
+    line-height: normal;
+  }
 
-	.owners__img {
-		width: 180px;
-	}
+  .owners__img {
+    width: 180px;
+  }
 
-	.owners__name {
-		font-size: 28px;
-	}
+  .owners__name {
+    font-size: 28px;
+  }
 
-	.owners__text {
-		font-size: 20px;
-	}
+  .owners__text {
+    font-size: 20px;
+  }
 
-	.team {
-		padding: 50px 0;
-	}
+  .team {
+    padding: 50px 0;
+  }
 
-	.team__title {
-		font-size: 60px;
-		line-height: normal;
-	}
-	
+  .team__title {
+    font-size: 60px;
+    line-height: normal;
+  }
 }
 
 @media screen and (max-width: 540px) {
-	.karaoke__title {
-		font-size: 4em;
-	}
+  .karaoke__title {
+    font-size: 4em;
+  }
 
-	.reviews {
-		padding: 40px 0;
-	}
+  .reviews {
+    padding: 40px 0;
+  }
 
-	.reviews__suptitle {
-		font-size: 28px;
-	}
+  .reviews__suptitle {
+    font-size: 28px;
+  }
 
-	.reviews__title {
-		font-size: 50px;
-	}
+  .reviews__title {
+    font-size: 50px;
+  }
 
-	.reviews__subtitle {
-		font-size: 28px;
-	}
+  .reviews__subtitle {
+    font-size: 28px;
+  }
 
-	
+  .owners__title {
+    margin-bottom: 25px;
+    font-size: 28px;
+  }
 
-	.owners__title {
-		margin-bottom: 25px;
-		font-size: 28px;
-	}
+  .owners__item {
+    gap: 25px;
+  }
 
-	.owners__item {
-		gap: 25px;
-	}
+  .owners__name {
+    font-size: 20px;
+  }
 
-	.owners__name {
-		font-size: 20px;
-	}
+  .owners__btn {
+    font-size: 14px;
+  }
 
-	.owners__btn {
-		font-size: 14px;
-	}
+  .owners__img {
+    width: 130px;
+  }
 
-	.owners__img {
-		width: 130px;
-	}
-	
-	.team__title {
-		font-size: 42px;
-	}
+  .team__title {
+    font-size: 42px;
+  }
 }
 
 @media screen and (max-width: 500px) {
+  section {
+    padding: 20px 0;
+  }
 
-	section {
-		padding: 20px 0;
-	}
+  .intro {
+    padding-bottom: 50px;
+  }
 
-	.intro {
-		padding-bottom: 50px;
-	}
+  .intro__text {
+    margin: 10px 0;
+  }
 
-	.intro__text {
-		margin: 10px 0;
-	}
+  .header__list {
+    gap: 20px;
+  }
 
-	.header__list {
-		gap: 20px;
-	}
+  .header__link {
+    font-size: 16px;
+  }
 
-	.header__link {
-		font-size: 16px;
-	}
+  .intro__logo {
+    margin-top: 230px;
+    margin-bottom: 50px;
+  }
 
-	.intro__logo {
-		margin-top: 230px;
-		margin-bottom: 50px;
-	}
+  .intro__text {
+    font-size: 20px;
+  }
 
-	.intro__text {
-		font-size: 20px;
-	}
+  .intro__subtext {
+    font-size: 20px;
+  }
 
-	.intro__subtext {
-		font-size: 20px;
-	}
+  .section__title {
+    font-size: 3.6em;
+  }
 
-	.section__title {
-		font-size: 3.6em;
-	}
+  .airsoft__title {
+    font-size: 2.4em;
+  }
 
-	.airsoft__title  {
-		font-size: 2.4em;
-	}
+  .karaoke__title {
+    font-size: 2.8em;
+  }
 
-	.karaoke__title {
-		font-size: 2.8em;
-	}
+  .reviews__text {
+    font-size: 18px;
+  }
 
-	.reviews__text {
-		font-size: 18px;
-	}
+  .reviews__item {
+    width: 280px;
+  }
 
-	.reviews__item {
-		width: 280px;
-	}
+  .reviews__item img {
+    width: 280px;
+  }
 
-	.reviews__item img {
-		width: 280px;
-	}
+  .karaoke__text {
+    margin: 30px 0;
+  }
 
-	.karaoke__text {
-		margin: 30px 0;
-	}
+  .footer__quote {
+    font-size: 24px;
+  }
 
-	.footer__quote {
-		font-size: 24px;
-	}
-
-	.owners__text {
-		width: 140px;
-		font-size: 16px;
-	}
-
-} 
+  .owners__text {
+    width: 140px;
+    font-size: 16px;
+  }
+}
 
 @media screen and (max-width: 400px) {
-	
-	.intro__text {
-		max-width: 300px;
-		margin: 0 auto;
-		margin-bottom: 10px;
-	}
+  .intro__text {
+    max-width: 300px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+  }
 
-	.intro__subtext {
-		max-width: 300px;
-		margin: 0 auto;
-		margin-bottom: 10px;
-	}
+  .intro__subtext {
+    max-width: 300px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+  }
 
-	.intro__btn {
-		font-size: 20px;
-	}
-	
-	.section__title {
-		font-size: 3em;
-	}
+  .intro__btn {
+    font-size: 20px;
+  }
 
-	.mafia__bunker{
-		
-		font-size: 2em;
-	
-	}
+  .section__title {
+    font-size: 3em;
+  }
 
-	.airsoft__title {
-		font-size: 2em;
-	}
+  .mafia__bunker {
+    font-size: 2em;
+  }
 
-	.karaoke__title {
-		font-size: 2.6em;
-	}
-	
-	.owners__title {
-		font-size: 24px;
-	}
-	
-	.owners__btn {
-		font-size: 12px;
-	}
+  .airsoft__title {
+    font-size: 2em;
+  }
 
-	.owners__img {
-		width: 110px;
-	}
-	
-	.owners__name {
-		font-size: 18px;
-	}
-	
+  .karaoke__title {
+    font-size: 2.6em;
+  }
+
+  .owners__title {
+    font-size: 24px;
+  }
+
+  .owners__btn {
+    font-size: 12px;
+  }
+
+  .owners__img {
+    width: 110px;
+  }
+
+  .owners__name {
+    font-size: 18px;
+  }
 }
